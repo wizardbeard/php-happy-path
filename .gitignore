@@ -1,0 +1,53 @@
+# Common files
+*~
+*.patch
+*.swp
+*.tmp
+
+# Build system files
+*.a
+*.la
+*.dylib
+.libs/
+*.lo
+*.loT
+*.o
+*.dep
+
+# Configuration files
+config.h
+config.h.in
+php_config.h
+
+# Generated files
+php-cgi
+php-fpm
+json_scanner.c
+
+# Tests
+*.diff
+*.out
+*.exp
+*.log
+*.sh
+*.db
+*.mem
+php_test_results_*.txt
+
+# IDE and Editor Files
+*.idea/
+*.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Vendor & Composer
+vendor/
+composer.lock
+phpunit.xml
+.php-cs-fixer.cache
+.php-cs-fixer.php
+.phpunit.result.cache
+composer.phar
+package.tar
+/packages.json
+/.phpunit

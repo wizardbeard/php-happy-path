@@ -1,0 +1,27 @@
+{
+    "name": "wizardbeard/php-happy-path",
+    "description": "A simple MVC framework you can learn in 5 minutes.",
+    "version": "0.0.1",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wizardbeard\\PhpHappyPath\\": "src/",
+            "Wizardbeard\\PhpHappyPath\\Attributes\\": "src/Attributes",
+            "Wizardbeard\\PhpHappyPath\\Controllers\\": "src/Controllers",
+            "Wizardbeard\\PhpHappyPath\\Core\\": "src/Core",
+            "Wizardbeard\\PhpHappyPath\\Models\\": "src/Models",
+            "Wizardbeard\\PhpHappyPath\\Routes\\": "src/Routes",
+            "Wizardbeard\\PhpHappyPath\\Views\\": "src/Views"
+        }
+    },
+    "authors": [
+        {
+            "name": "wizardbeard",
+            "email": "ramonjlongiii@gmail.com"
+        }
+    ],
+    "require": {
+        "php-patterns/activerecord": "^2.0"
+    }
+}
