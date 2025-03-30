@@ -5,7 +5,7 @@ namespace Wizardbeard\PhpHappyPath\Attributes;
 use Attribute;
 use function is_array;
 
-#[Attribute(Attribute::IS_REPEATABLE | Attribute::TARGET_CLASS | Attribute::TARGET_METHOD)]
+#[Attribute(Attribute::IS_REPEATABLE | /**Attribute::TARGET_CLASS |*/ Attribute::TARGET_METHOD)]
 class Route
 {
     private ?string $path = null;
@@ -70,7 +70,3 @@ class Route
         $this->schemes = $schemes;
     }
 }
-
-//if (!class_exists(\Wizardbeard\PhpHappyPath\Attributes\Route::class, false)) {
-//    class_alias(Route::class, \Wizardbeard\PhpHappyPath\Attributes\Route::class);
-//}

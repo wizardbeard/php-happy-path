@@ -7,9 +7,16 @@ use Wizardbeard\PhpHappyPath\Core\Flash;
 
 class Router
 {
-    protected $routes = [];
+    protected array $routes = [];
 
-    private function addRoute($route, $controller, $action, $method)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @param $method
+     * @return void
+     */
+    private function addRoute($route, $controller, $action, $method): void
     {
         try {
             $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];
@@ -18,27 +25,57 @@ class Router
         }
     }
 
-    public function get($route, $controller, $action)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @return void
+     */
+    public function get($route, $controller, $action): void
     {
         $this->addRoute($route, $controller, $action, "GET");
     }
 
-    public function post($route, $controller, $action)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @return void
+     */
+    public function post($route, $controller, $action): void
     {
         $this->addRoute($route, $controller, $action, "POST");
     }
 
-    public function patch($route, $controller, $action)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @return void
+     */
+    public function patch($route, $controller, $action): void
     {
         $this->addRoute($route, $controller, $action, "PATCH");
     }
 
-    public function put($route, $controller, $action)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @return void
+     */
+    public function put($route, $controller, $action): void
     {
         $this->addRoute($route, $controller, $action, "PUT");
     }
 
-    public function delete($route, $controller, $action)
+    /**
+     * @param $route
+     * @param $controller
+     * @param $action
+     * @return void
+     */
+    public function delete($route, $controller, $action): void
     {
         $this->addRoute($route, $controller, $action, "DELETE");
     }
@@ -46,7 +83,7 @@ class Router
     /**
      * @throws Exception
      */
-    public function dispatch()
+    public function dispatch(): void
     {
         $uri = strtok($_SERVER['REQUEST_URI'], '?');
         $method =  $_SERVER['REQUEST_METHOD'];
